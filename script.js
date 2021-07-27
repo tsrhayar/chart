@@ -1,19 +1,38 @@
 var marksCanvas = document.getElementById("marksChart");
 
-var marksData = {
-  labels: ["English", "Maths", "Physics", "Chemistry", "Biology", "History"],
+const data = {
+  labels: [
+    'Eating',
+    'Drinking',
+    'Sleeping',
+    'Designing',
+    'Coding',
+    'Cycling',
+    'Running'
+  ],
   datasets: [{
-    label: "Student A",
-    backgroundColor: "rgba(200,0,0,0.2)",
-    data: [65, 75, 70, 80, 60, 80]
+    label: 'My First Dataset',
+    data: [65, 59, 90, 81, 56, 55, 40],
+    fill: true,
+    backgroundColor: 'rgba(0, 0, 0, 0.0)',
+    borderColor: 'rgb(255, 99, 132)',
+    pointBackgroundColor: 'rgb(255, 99, 132)',
+    pointBorderColor: '#fff',
+    pointHoverBackgroundColor: '#fff',
+    pointHoverBorderColor: 'rgb(255, 99, 132)'
   }, {
-    label: "Student B",
-    backgroundColor: "rgba(0,0,200,0.2)",
-    data: [54, 65, 60, 70, 70, 75]
-  }]
-};
+    label: 'My First Dataset',
+    data: [28, 48, 40, 19, 96, 27, 100],
+    fill: true,
+    backgroundColor: 'rgba(0, 0, 0, 0.0)',
+    borderColor: 'rgb(54, 162, 235)',
+    pointBackgroundColor: 'rgb(54, 162, 235)',
+    pointBorderColor: '#fff',
+    pointHoverBackgroundColor: '#fff',
+    pointHoverBorderColor: 'rgb(54, 162, 235)'
+  }]}
 
 var radarChart = new Chart(marksCanvas, {
   type: 'radar',
-  data: marksData
+  data: data
 });
