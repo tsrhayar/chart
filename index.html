@@ -11,7 +11,56 @@
 <body>
     <canvas id="marksChart" width="600" height="400"></canvas>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-    <script src="./script.js"></script>
+    <script>
+    var marksCanvas = document.getElementById("marksChart");
+
+const data = {
+  labels: [
+    'Note partie standard',
+    'Note compétences techniques',
+    'Note compétences managériales',
+    'Note langues',
+    'Note compétences informatiques'
+  ],
+  datasets: [{
+    label: 'taoufik Sag',
+    data: [5.333333333333333, 4.666666666666667, 6, 8, 5],
+    fill: true,
+    backgroundColor: 'rgba(0, 0, 0, 0.0)',
+    borderColor: 'rgb(255, 99, 132)',
+    pointBackgroundColor: 'rgb(255, 99, 132)',
+    pointBorderColor: '#fff',
+    pointHoverBackgroundColor: '#fff',
+    pointHoverBorderColor: 'rgb(255, 99, 132)'
+  }, {
+    label: 'taoufik Sag',
+    data: [5, 10, 10, 8, 10],
+    fill: true,
+    backgroundColor: 'rgba(0, 0, 0, 0.0)',
+    borderColor: 'rgb(54, 162, 235)',
+    pointBackgroundColor: 'rgb(54, 162, 235)',
+    pointBorderColor: '#fff',
+    pointHoverBackgroundColor: '#fff',
+    pointHoverBorderColor: 'rgb(54, 162, 235)'
+  }, {
+    label: 'taoufik1 Sag1',
+    data: [5.666666666666667, 6, 8.666666666666666, 8, 6.666666666666667],
+    fill: true,
+    backgroundColor: 'rgba(0, 0, 0, 0.0)',
+    borderColor: 'rgb(162, 54, 235)',
+    pointBackgroundColor: 'rgb(162, 54, 235)',
+    pointBorderColor: '#fff',
+    pointHoverBackgroundColor: '#fff',
+    pointHoverBorderColor: 'rgb(54, 162, 235)'
+  }
+  ]
+}
+
+var radarChart = new Chart(marksCanvas, {
+  type: 'radar',
+  data: data
+});
+    </script>
 </body>
 
 </html>
